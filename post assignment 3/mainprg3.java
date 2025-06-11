@@ -1,24 +1,24 @@
-package addon_dsa;  
+package addon_dsa;
 
-class Node {    
+class SLNode {    
     int data;    
-    Node next;     
+    SLNode next;     
 
-    public Node(int data) {        
+    public SLNode(int data) {        
         this.data = data;        
         this.next = null;    
     } 
 }  
 
 class Listed {    
-    Node head;     
+    SLNode head;     
 
     public void insert(int data) {        
-        Node newNode = new Node(data);        
+        SLNode newNode = new SLNode(data);        
         if (head == null) {            
             head = newNode;        
         } else {            
-            Node current = head;            
+            SLNode current = head;            
             while (current.next != null) {                
                 current = current.next;            
             }            
@@ -27,9 +27,9 @@ class Listed {
     }     
 
     public void reverse() {        
-        Node prev = null;        
-        Node current = head;        
-        Node next;         
+        SLNode prev = null;        
+        SLNode current = head;        
+        SLNode next;         
 
         while (current != null) {            
             next = current.next;               
@@ -43,7 +43,7 @@ class Listed {
     }     
 
     public void traverse() {        
-        Node current = head;        
+        SLNode current = head;        
         while (current != null) {            
             System.out.print(current.data + " -> ");            
             current = current.next;        
@@ -54,7 +54,7 @@ class Listed {
 
 public class mainprg3 {    
     public static void main(String[] args) {        
-        Listed list = new Listed();  // Correct class name usage        
+        Listed list = new Listed();        
         list.insert(1);        
         list.insert(2);        
         list.insert(3);        
@@ -63,9 +63,9 @@ public class mainprg3 {
         System.out.print("Original Linked List: ");        
         list.traverse();         
 
-        list.reverse();  // Reverse the list        
+        list.reverse();        
 
         System.out.print("Reversed Linked List: ");        
-        list.traverse();  // Print reversed list    
+        list.traverse();    
     } 
 }

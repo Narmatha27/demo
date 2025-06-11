@@ -1,24 +1,24 @@
 package addon_dsa;
 
-class ListNode {  
+class SimpleNode {  // Renamed from SLNode
     int data;
-    ListNode next;
+    SimpleNode next;
 
-    public ListNode(int data) {  
+    public SimpleNode(int data) {
         this.data = data;
         this.next = null;
     }
 }
 
 class LinkedList {
-    ListNode head;
+    SimpleNode head;
 
     public void insert(int data) {
-        ListNode newNode = new ListNode(data);
+        SimpleNode newNode = new SimpleNode(data);
         if (head == null) {
             head = newNode;
         } else {
-            ListNode current = head;
+            SimpleNode current = head;
             while (current.next != null) {
                 current = current.next;
             }
@@ -27,7 +27,7 @@ class LinkedList {
     }
 
     public void traverse() {
-        ListNode current = head;
+        SimpleNode current = head;
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.next;
