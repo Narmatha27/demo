@@ -1,0 +1,4 @@
+use tests;
+create table narmatha(name varchar(20),mark int,department varchar(20),section varchar(20));
+insert into narmatha values("Anu",20,"BCA","B"),("Banu",20,"BCA","B"),("Devi",20,"BCA","B"),("Harini",20,"BCA","B"),("Ishu",20,"BCA","B");
+select * from narmatha;
