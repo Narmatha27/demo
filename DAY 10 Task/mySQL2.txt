@@ -1,0 +1,6 @@
+create table narmatha(name varchar(20),mark int,department varchar(20),section varchar(20));
+insert into narmatha values("Havi",30,"BCA","B");
+update narmatha set name="narmatha" where name ="Devi";
+DELETE FROM narmatha WHERE name="Anu";
+select name,department,section from narmatha where (mark<60);
+select * from narmatha;
